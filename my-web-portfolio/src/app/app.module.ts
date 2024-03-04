@@ -7,13 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarHeaderComponent } from './components/navbar-header/navbar-header.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { HomeBannerComponent } from './components/home-banner/home-banner.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarHeaderComponent,
     HomepageComponent,
+    HomeBannerComponent,
 
   ],
   imports: [
@@ -22,7 +25,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
