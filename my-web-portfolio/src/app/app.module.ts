@@ -1,3 +1,5 @@
+import { NgDompurifySanitizer } from "@tinkoff/ng-dompurify";
+import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER, } from "@taiga-ui/core";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,12 +13,16 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeBannerComponent } from './components/home-banner/home-banner.component';
+import { MapsComponent } from './components/maps/maps.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarHeaderComponent,
     HomepageComponent,
     HomeBannerComponent,
+    MapsComponent
 
   ],
   imports: [
@@ -26,9 +32,13 @@ import { HomeBannerComponent } from './components/home-banner/home-banner.compon
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatGridListModule
-  ],
-  providers: [],
+    MatGridListModule,
+      TuiRootModule,
+      TuiDialogModule,
+      TuiAlertModule,
+      
+],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
