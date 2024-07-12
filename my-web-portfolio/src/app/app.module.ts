@@ -37,6 +37,7 @@ import { MapsComponent } from './components/maps/maps.component';
       TuiDialogModule,
       TuiAlertModule,
       
+      
 ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
